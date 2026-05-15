@@ -670,6 +670,9 @@
         #about div p {
             text-shadow: 0 2px 12px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.9);
         }
+                #about .section-title, #about div p { text-shadow: 0 2px 12px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.9); }
+        @media (min-width: 768px) { #about, #tokenomics, #presale, #roadmap, #community { background-attachment: fixed; } }
+        @media (max-width: 767px) { #about, #tokenomics, #presale, #roadmap, #community { background-size: cover !important; background-position: center center !important; background-attachment: scroll !important; } }
     </style>
 </head>
 <body>
@@ -733,8 +736,7 @@
     </section>
 
     <!-- 2. ABOUT SECTION -->
-    <section id="about" class="section-padding" style="background-image: linear-gradient(to bottom, rgba(2,2,2,0.88) 0%, rgba(2,2,2,0.82) 40%, rgba(2,2,2,0.82) 60%, rgba(2,2,2,0.88) 100%), url('pengu-bg.jpg.jpeg'); background-size: cover; background-position: center top; background-attachment: scroll;">
-        <div class="container animate-on-scroll">
+    <section id="about" class="section-padding" style="background-image: linear-gradient(to bottom, rgba(0,10,20,0.92) 0%, rgba(0,10,20,0.78) 40%, rgba(0,10,20,0.78) 60%, rgba(0,10,20,0.92) 100%), url('pengu-bg.jpg.jpeg'); background-size: cover; background-position: center top; background-attachment: scroll;">        <div class="container animate-on-scroll">
             <h2 class="section-title">What is <span>$PENGU</span>?</h2>
             <div style="max-width: 800px; margin: 0 auto; text-align: center; color: #ddd; line-height: 1.9; font-size: 1.1rem;">
                 <p style="margin-bottom: 25px;">$PENGU is a community-driven meme token built on Ethereum for early supporters who believe in strong communities, organic growth, and long-term momentum.</p>
@@ -808,8 +810,7 @@
     </section>
 
     <!-- 5. TOKENOMICS -->
-    <section id="tokenomics" class="section-padding" style="background-image: linear-gradient(to bottom, rgba(2,2,2,0.90) 0%, rgba(2,2,2,0.65) 50%, rgba(2,2,2,0.90) 100%), url('https://images.unsplash.com/photo-1639762681057-408e52192e55?auto=format&fit=crop&w=1400&q=80'); background-size: cover; background-position: center; background-attachment: scroll;">
-        <div class="container">
+    <section id="tokenomics" class="section-padding" style="background-image: linear-gradient(to bottom, rgba(0,10,20,0.92) 0%, rgba(0,10,20,0.68) 50%, rgba(0,10,20,0.92) 100%), url('https://images.unsplash.com/photo-1639762681057-408e52192e55?auto=format&fit=crop&w=1400&q=80'); background-size: cover; background-position: center; background-attachment: scroll;">        <div class="container">
             <h2 class="section-title animate-on-scroll">Tokenomics</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; align-items: center;">
                 <div class="animate-on-scroll delay-100" style="text-align: center; background: rgba(255, 215, 0, 0.05); padding: 50px; border-radius: 25px; border: 1px solid rgba(255, 215, 0, 0.2);">
@@ -828,8 +829,7 @@
     </section>
 
     <!-- 6. PRESALE SECTION -->
-    <section id="presale" class="section-padding" style="background-image: linear-gradient(to right, rgba(2,2,2,0.92) 0%, rgba(2,2,2,0.60) 50%, rgba(2,2,2,0.92) 100%), url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1400&q=80'); background-size: cover; background-position: center; background-attachment: scroll;">
-        <div class="container">
+    <section id="presale" class="section-padding" style="background-image: linear-gradient(to right, rgba(0,10,20,0.94) 0%, rgba(0,10,20,0.65) 50%, rgba(0,10,20,0.94) 100%), url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1400&q=80'); background-size: cover; background-position: center; background-attachment: scroll;">        <div class="container">
             <div class="presale-wrapper animate-on-scroll">
                 <h2 style="font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: 15px; color: white;">🚀 $PENGU Presale is LIVE</h2>
                 <p style="color: #ccc; font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px;">The early stage is where strong positions are built. Join the movement before the next wave arrives.</p>
@@ -874,8 +874,7 @@
     </section>
 
     <!-- 8. ROADMAP -->
-    <section id="roadmap" class="section-padding" style="background-image: linear-gradient(to top, rgba(2,2,2,0.92) 0%, rgba(2,2,2,0.55) 40%, rgba(2,2,2,0.55) 70%, rgba(2,2,2,0.92) 100%), url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1400&q=80'); background-size: cover; background-position: center; background-attachment: scroll;">
-        <div class="container">
+   <section id="roadmap" class="section-padding" style="background-image: linear-gradient(to top, rgba(0,10,20,0.94) 0%, rgba(0,10,20,0.60) 40%, rgba(0,10,20,0.60) 70%, rgba(0,10,20,0.94) 100%), url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1400&q=80'); background-size: cover; background-position: center; background-attachment: scroll;">       <div class="container">
             <h2 class="section-title animate-on-scroll">Roadmap</h2>
             <div class="timeline">
                 <div class="phase left animate-on-scroll delay-100">
@@ -919,8 +918,7 @@
     </section>
 
     <!-- 9. COMMUNITY SECTION -->
-    <section id="community" class="section-padding" style="background-image: radial-gradient(ellipse at center, rgba(2,2,2,0.55) 0%, rgba(2,2,2,0.85) 70%, rgba(2,2,2,0.97) 100%), url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1400&q=80'); background-size: cover; background-position: center; background-attachment: scroll;">
-        <div class="container">
+    <section id="community" class="section-padding" style="background-image: radial-gradient(ellipse at center, rgba(0,10,20,0.60) 0%, rgba(0,10,20,0.87) 70%, rgba(0,10,20,0.97) 100%), url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1400&q=80'); background-size: cover; background-position: center; background-attachment: scroll;">        <div class="container">
             <h2 class="section-title animate-on-scroll">Join the <span>$PENGU</span> Community 🐧</h2>
             <p class="animate-on-scroll" style="text-align: center; color: var(--text-muted); margin-bottom: 50px; font-size: 1.1rem; max-width: 700px; margin-left: auto; margin-right: auto;">Become part of a growing community focused on building, engaging, and expanding together.</p>
             
