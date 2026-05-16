@@ -704,6 +704,10 @@
                     <li><a href="#faq" onclick="toggleMenu()">FAQ</a></li>
                     <li><a href="https://dx.app/dxsale/view?address=0xE81d5d68665129888608322586B3F5Ba81bF2a42&chain=1" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.75rem;">Buy</a></li>
                 </ul>
+                <div class="lang-switcher" style="display:flex;align-items:center;gap:2px;background:rgba(255,215,0,0.08);border:1px solid rgba(255,215,0,0.3);border-radius:50px;padding:4px;margin-right:12px;">
+                    <button id="btnEN" onclick="setLang('en')" style="padding:5px 12px;border-radius:50px;font-weight:700;font-size:0.7rem;letter-spacing:1px;cursor:pointer;border:none;background:linear-gradient(135deg,#FFD700,#FFA500);color:#000;">EN</button>
+                    <button id="btnTR" onclick="setLang('tr')" style="padding:5px 12px;border-radius:50px;font-weight:700;font-size:0.7rem;letter-spacing:1px;cursor:pointer;border:none;background:transparent;color:#888;">TR</button>
+                </div>
                 <div class="hamburger" onclick="toggleMenu()">
                     <div class="bar"></div>
                     <div class="bar"></div>
@@ -864,7 +868,7 @@
                     <span class="security-icon">🛡️</span>
                     <h3 style="font-family: var(--font-heading); margin-bottom: 15px; font-size: 1.5rem; color: white;">Liquidity Locked</h3>
                     <p style="color: var(--text-muted); margin-bottom: 30px; line-height: 1.6;">100% of the presale liquidity will be locked for safety. No rug pulls.</p>
-                    <a href="#" class="btn btn-outline">View Lock Proof</a>
+                    <a href="https://dx.app/dxlock/view/token-locker?address=0x00dd06fb748400815cb2516629bbe6f677fee882&chain=1" target="_blank" class="btn btn-outline">View Lock Proof</a>
                 </div>
                 <div class="security-card animate-on-scroll delay-200">
                     <span class="security-icon">✅</span>
@@ -1058,6 +1062,22 @@
             const s = time % 60;
             countdownEl.innerText = `${String(h).padStart(2,'0')} : ${String(m).padStart(2,'0')} : ${String(s).padStart(2,'0')}`;
         }, 1000);
+
+                function setLang(lang) {
+            const t = {
+                en: ['About','Tokenomics','Presale','Roadmap','Security','FAQ','Join Presale','Telegram News','Security & Trust','Liquidity Locked','100% of the presale liquidity will be locked for safety. No rug pulls.','View Lock Proof','Contract Verified','The smart contract source code is verified and audited on Etherscan.','View on Etherscan','Roadmap','FAQ'],
+                tr: ['Hakkında','Tokenomiks','Ön Satış','Yol Haritası','Güvenlik','SSS','Ön Satışa Katıl','Telegram Haberleri','Güvenlik ve Güven','Likidite Kilitli','Ön satış likiditesinin %100\'ü güvenlik için kilitlenecektir. Rug pull yok.','Kilit Kanıtını Gör','Sözleşme Doğrulandı','Akıllı sözleşme kaynak kodu Etherscan\'de doğrulanmış ve denetlenmiştir.','Etherscan\'de Görüntüle','Yol Haritası','SSS']
+            }[lang];
+            const navEls = document.querySelectorAll('.nav-links li a:not(.btn)');
+            ['About','Tokenomics','Presale','Roadmap','Security','FAQ'].forEach((txt, i) => {
+                if (navEls[i]) navEls[i].textContent = t[i];
+            });
+            document.getElementById('btnEN').style.background = lang==='en' ? 'linear-gradient(135deg,#FFD700,#FFA500)' : 'transparent';
+            document.getElementById('btnEN').style.color = lang==='en' ? '#000' : '#888';
+            document.getElementById('btnTR').style.background = lang==='tr' ? 'linear-gradient(135deg,#FFD700,#FFA500)' : 'transparent';
+            document.getElementById('btnTR').style.color = lang==='tr' ? '#000' : '#888';
+        }
+   
     </script>
 </body>
 </html>
