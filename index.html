@@ -554,10 +554,11 @@
             text-align: center;
         }
         
-        .footer-logo-img {
-            width: 120px;
-            height: auto;
-            margin-bottom: 30px;
+            .footer-logo-img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            margin-bottom: 0;
             opacity: 0.7;
             filter: grayscale(100%);
             transition: 0.4s;
@@ -595,27 +596,23 @@
         .copy-btn-icon:hover { color: #fff; transform: scale(1.2); }
 
         /* --- FLOATING BTN --- */
-                .floating-btn {
+            .floating-btn {
             position: fixed;
             bottom: 30px;
             right: 30px;
             z-index: 999;
+            width: 90px;
+            height: 90px;
             background: var(--gold-gradient);
-            border-radius: 50px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 6px;
-            padding: 12px 20px;
             box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
             animation: pulse 2s infinite;
             border: 3px solid #fff;
             color: #000;
-            font-weight: 800;
-            font-size: 0.75rem;
-            letter-spacing: 0.5px;
             text-decoration: none;
-            white-space: nowrap;
         }
         .floating-btn:hover { transform: scale(1.1) rotate(10deg); }
 
@@ -716,8 +713,16 @@
 <body>
 
     <!-- Floating Buy Button -->
-       <a href="https://dx.app/dxsale/view?address=0xE81d5d68665129888608322586B3F5Ba81bF2a42&chain=1" class="floating-btn" title="Join Presale">
-        <span style="font-size:22px;">🐧</span><span>Join Presale</span>
+          <a href="https://dx.app/dxsale/view?address=0xE81d5d68665129888608322586B3F5Ba81bF2a42&chain=1" class="floating-btn" title="Join Presale">
+        <svg viewBox="0 0 100 100" width="88" height="88">
+            <defs>
+                <path id="tc" d="M50,50 m-34,0 a34,34 0 1,1 68,0 a34,34 0 1,1 -68,0"/>
+            </defs>
+            <text fill="#000" font-size="9" font-weight="900" letter-spacing="3" font-family="Arial,sans-serif">
+                <textPath href="#tc">JOIN PRESALE • JOIN PRESALE •</textPath>
+            </text>
+            <text x="50" y="58" text-anchor="middle" font-size="32" dominant-baseline="middle">🐧</text>
+        </svg>
     </a>
 
     <!-- Header -->
@@ -1030,11 +1035,7 @@
                     <span class="copy-btn-icon" onclick="copyContract()">📋</span>
                 </div>
             </div>
-            <div class="contract-box">
-                <span class="contract-text" id="contractText">0xFadbbcb75e5FF5e622572D9272638a784f54d95B</span>
-                <span class="copy-btn-icon" onclick="copyContract()">📋</span>
-            </div>
-
+          
             <style>
                 footer a:hover { color: var(--gold-primary); border-bottom: 1px solid var(--gold-primary); }
             </style>
